@@ -227,7 +227,7 @@ const Services = () => {
               asChild 
               variant="outline" 
               size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="border-primary-foreground text-primary bg-primary-foreground hover:bg-primary-foreground/90"
             >
               <Link to="/portfolio">See Our Work</Link>
             </Button>
