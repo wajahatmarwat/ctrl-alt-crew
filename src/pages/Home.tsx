@@ -31,7 +31,10 @@ const Home = () => {
             <KeyboardLogo size="xl" className="justify-center mb-8" />
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-gradient">Restart Innovation</span>
+              Press{' '}
+              <span className="text-gradient">Ctrl Alt Crew</span>
+              <br />
+              to Restart Innovation
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -104,19 +107,53 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Achievements Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Ctrl Alt Crew's Achievements</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We take pride in empowering startups and enterprises worldwide with AI-powered, scalable, and innovative solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
+              <div className="text-5xl font-bold text-gradient mb-2">150+</div>
+              <div className="text-muted-foreground">Successful Projects</div>
+            </div>
+            
+            <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
+              <div className="text-5xl font-bold text-gradient mb-2">80+</div>
+              <div className="text-muted-foreground">Active Clients</div>
+            </div>
+            
+            <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
+              <div className="text-5xl font-bold text-gradient mb-2">15+</div>
+              <div className="text-muted-foreground">Countries Served</div>
+            </div>
+            
+            <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
+              <div className="text-5xl font-bold text-gradient mb-2">1+</div>
+              <div className="text-muted-foreground">Years of Experience</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-primary-foreground mb-6">
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Reboot Your Business?
           </h2>
-          <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's turn your "it works on my machine" into "it works everywhere"
           </p>
           <Button 
             asChild 
             size="lg" 
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-4"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-4"
           >
             <Link to="/contact">Start Debugging with Us</Link>
           </Button>
