@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
+import DOMPurify from "isomorphic-dompurify";
 
 interface BlogPostFormProps {
   postId: string | null;
@@ -76,10 +77,16 @@ const BlogPostForm = ({ postId, onClose }: BlogPostFormProps) => {
     setLoading(true);
 
     try {
+      // Sanitize HTML content to prevent XSS attacks
+      const sanitizedContent = DOMPurify.sanitize(content, {
+        ALLOWED_TAGS: ['p', 'br', 'strong', 'em', 'u', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'blockquote', 'code', 'pre', 'img', 'div', 'span'],
+        ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'class', 'id']
+      });
+
       const postData = {
         title,
         slug,
-        content,
+        content: sanitizedContent,
         cover_image: coverImage || null,
         author,
         published,

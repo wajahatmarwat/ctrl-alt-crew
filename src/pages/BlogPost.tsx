@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Loader2, ArrowLeft, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet";
+import DOMPurify from "isomorphic-dompurify";
 
 interface BlogPost {
   id: string;
@@ -164,7 +165,12 @@ const BlogPost = () => {
 
             <div
               className="prose prose-invert max-w-none mb-12"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ 
+                __html: DOMPurify.sanitize(post.content, {
+                  ALLOWED_TAGS: ['p', 'br', 'strong', 'em', 'u', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'blockquote', 'code', 'pre', 'img', 'div', 'span'],
+                  ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'class', 'id']
+                })
+              }}
             />
 
             {/* AdSense placeholder - second ad */}
