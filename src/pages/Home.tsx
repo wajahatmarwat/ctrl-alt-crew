@@ -31,10 +31,7 @@ const Home = () => {
             <KeyboardLogo size="xl" className="justify-center mb-8" />
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Press{' '}
-              <span className="text-gradient">Ctrl Alt Crew</span>
-              <br />
-              to Restart Innovation
+              <span className="text-gradient">Restart Innovation</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -48,7 +45,7 @@ const Home = () => {
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 glow-hover text-lg px-8 py-4"
               >
-                <Link to="/contact">Launch Project 🚀</Link>
+                <Link to="/contact">Launch Project</Link>
               </Button>
               <Button 
                 asChild 
@@ -121,7 +118,7 @@ const Home = () => {
             size="lg" 
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-4"
           >
-            <Link to="/contact">Start Debugging with Us 🛠️</Link>
+            <Link to="/contact">Start Debugging with Us</Link>
           </Button>
         </div>
       </section>

@@ -63,9 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			fontFamily: {
-				'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
-			},
+		fontFamily: {
+			'sans': ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
+			'mono': ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
+		},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-dark': 'var(--gradient-dark)',
