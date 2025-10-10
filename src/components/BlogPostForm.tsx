@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import DOMPurify from "isomorphic-dompurify";
+import { handleError, USER_ERRORS } from "@/lib/errorHandler";
 
 interface BlogPostFormProps {
   postId: string | null;
@@ -49,12 +50,7 @@ const BlogPostForm = ({ postId, onClose }: BlogPostFormProps) => {
       setAuthor(data.author);
       setPublished(data.published);
     } catch (error) {
-      console.error("Error fetching post:", error);
-      toast({
-        title: "Error",
-        description: "Failed to load post.",
-        variant: "destructive",
-      });
+      handleError(error, USER_ERRORS.LOAD_FAILED);
     }
   };
 
@@ -117,12 +113,7 @@ const BlogPostForm = ({ postId, onClose }: BlogPostFormProps) => {
 
       onClose();
     } catch (error: any) {
-      console.error("Error saving post:", error);
-      toast({
-        title: "Error",
-        description: error.message || "Failed to save post.",
-        variant: "destructive",
-      });
+      handleError(error, USER_ERRORS.SAVE_FAILED);
     } finally {
       setLoading(false);
     }

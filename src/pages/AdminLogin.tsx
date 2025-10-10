@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import KeyboardLogo from "@/components/KeyboardLogo";
+import { handleError, USER_ERRORS } from "@/lib/errorHandler";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -64,11 +65,7 @@ const AdminLogin = () => {
         navigate("/admin/dashboard");
       }
     } catch (error: any) {
-      toast({
-        title: "Authentication failed",
-        description: error.message,
-        variant: "destructive",
-      });
+      handleError(error, USER_ERRORS.AUTH_FAILED);
     } finally {
       setLoading(false);
     }

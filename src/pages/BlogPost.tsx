@@ -7,6 +7,7 @@ import { Loader2, ArrowLeft, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet";
 import DOMPurify from "isomorphic-dompurify";
+import { handleError, USER_ERRORS } from "@/lib/errorHandler";
 
 interface BlogPost {
   id: string;
@@ -53,7 +54,7 @@ const BlogPost = () => {
 
       setRelatedPosts(related || []);
     } catch (error) {
-      console.error("Error fetching post:", error);
+      handleError(error, USER_ERRORS.NOT_FOUND);
     } finally {
       setLoading(false);
     }

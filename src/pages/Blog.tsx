@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { handleError, USER_ERRORS } from "@/lib/errorHandler";
 
 interface BlogPost {
   id: string;
@@ -35,7 +36,7 @@ const Blog = () => {
       if (error) throw error;
       setPosts(data || []);
     } catch (error) {
-      console.error("Error fetching posts:", error);
+      handleError(error, USER_ERRORS.LOAD_FAILED);
     } finally {
       setLoading(false);
     }

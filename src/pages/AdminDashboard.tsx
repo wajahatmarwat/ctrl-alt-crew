@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2, Plus, LogOut, Edit, Trash2 } from "lucide-react";
 import KeyboardLogo from "@/components/KeyboardLogo";
 import BlogPostForm from "@/components/BlogPostForm";
+import { handleError, USER_ERRORS } from "@/lib/errorHandler";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -71,7 +72,9 @@ const AdminDashboard = () => {
       setIsAdmin(true);
       fetchPosts();
     } catch (error) {
-      console.error("Error checking admin access:", error);
+      if (import.meta.env.DEV) {
+        console.error("Dev Error - Admin access check:", error);
+      }
       navigate("/admin");
     } finally {
       setLoading(false);
@@ -88,12 +91,7 @@ const AdminDashboard = () => {
       if (error) throw error;
       setPosts(data || []);
     } catch (error) {
-      console.error("Error fetching posts:", error);
-      toast({
-        title: "Error",
-        description: "Failed to load posts.",
-        variant: "destructive",
-      });
+      handleError(error, USER_ERRORS.LOAD_FAILED);
     }
   };
 
@@ -115,12 +113,7 @@ const AdminDashboard = () => {
 
       fetchPosts();
     } catch (error) {
-      console.error("Error deleting post:", error);
-      toast({
-        title: "Error",
-        description: "Failed to delete post.",
-        variant: "destructive",
-      });
+      handleError(error, USER_ERRORS.DELETE_FAILED);
     } finally {
       setDeletePostId(null);
     }
