@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Plus, LogOut, Edit, Trash2 } from "lucide-react";
+import { Loader2, Plus, LogOut, Edit, Trash2, MessageSquare } from "lucide-react";
 import KeyboardLogo from "@/components/KeyboardLogo";
 import BlogPostForm from "@/components/BlogPostForm";
 import { handleError, USER_ERRORS } from "@/lib/errorHandler";
@@ -166,10 +166,18 @@ const AdminDashboard = () => {
               <KeyboardLogo />
               <h1 className="text-2xl font-bold font-mono">Admin Dashboard</h1>
             </div>
-            <Button variant="outline" onClick={handleSignOut}>
-              <LogOut className="mr-2 h-4 w-4" />
-              Sign Out
-            </Button>
+            <div className="flex gap-3">
+              <Button variant="outline" asChild>
+                <Link to="/admin/service-requests">
+                  <MessageSquare className="mr-2 h-4 w-4" />
+                  Service Requests
+                </Link>
+              </Button>
+              <Button variant="outline" onClick={handleSignOut}>
+                <LogOut className="mr-2 h-4 w-4" />
+                Sign Out
+              </Button>
+            </div>
           </div>
         </div>
       </header>
