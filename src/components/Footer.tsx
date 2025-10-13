@@ -4,7 +4,7 @@ import KeyboardLogo from './KeyboardLogo';
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-gradient-to-b from-secondary to-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -54,7 +54,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="mailto:hello@ctrlaltcrew.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:ctrlaltcreww@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

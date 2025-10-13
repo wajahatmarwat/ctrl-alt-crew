@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, ExternalLink, Brain, Bot, Smartphone } from 'lucide-react';
+import { Github, Brain, Bot, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -173,16 +173,10 @@ const Portfolio = () => {
                       <Badge className="bg-primary text-primary-foreground">
                         {project.status}
                       </Badge>
-                      <div className="flex space-x-2">
-                        <Button size="sm" variant="outline" className="border-primary text-primary">
-                          <Github className="h-4 w-4 mr-2" />
-                          Code
-                        </Button>
-                        <Button size="sm" variant="outline" className="border-primary text-primary">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Live Demo
-                        </Button>
-                      </div>
+                      <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                        <Github className="h-4 w-4 mr-2" />
+                        Code
+                      </Button>
                     </div>
                   </div>
                 </div>

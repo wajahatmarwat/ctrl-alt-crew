@@ -4,13 +4,18 @@ import { ArrowRight, Brain, Bot, Code, Smartphone, Database } from 'lucide-react
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import KeyboardLogo from '@/components/KeyboardLogo';
 import heroImage from '@/assets/hero-bg.jpg';
+import { useCountUp } from '@/hooks/useCountUp';
 import aiIcon from '@/assets/ai-icon.png';
 import chatbotIcon from '@/assets/chatbot-icon.png';
 import webDevIcon from '@/assets/web-dev-icon.png';
 
 const Home = () => {
+  const projectCount = useCountUp(150, 2000, 200);
+  const clientCount = useCountUp(80, 2000, 400);
+  const countryCount = useCountUp(15, 2000, 600);
+  const yearCount = useCountUp(1, 2000, 800);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -28,8 +33,6 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="animate-slide-up">
-            <KeyboardLogo size="xl" className="justify-center mb-8" />
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Press{' '}
               <span className="text-gradient">Ctrl Alt Crew</span>
@@ -119,22 +122,22 @@ const Home = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="text-5xl font-bold text-gradient mb-2">150+</div>
+              <div className="text-5xl font-bold text-gradient mb-2">{projectCount}+</div>
               <div className="text-muted-foreground">Successful Projects</div>
             </div>
             
             <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="text-5xl font-bold text-gradient mb-2">80+</div>
+              <div className="text-5xl font-bold text-gradient mb-2">{clientCount}+</div>
               <div className="text-muted-foreground">Active Clients</div>
             </div>
             
             <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="text-5xl font-bold text-gradient mb-2">15+</div>
+              <div className="text-5xl font-bold text-gradient mb-2">{countryCount}+</div>
               <div className="text-muted-foreground">Countries Served</div>
             </div>
             
             <div className="text-center p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="text-5xl font-bold text-gradient mb-2">1+</div>
+              <div className="text-5xl font-bold text-gradient mb-2">{yearCount}+</div>
               <div className="text-muted-foreground">Years of Experience</div>
             </div>
           </div>

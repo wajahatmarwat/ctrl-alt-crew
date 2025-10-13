@@ -206,7 +206,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">hello@ctrlaltcrew.com</p>
+                    <p className="text-sm text-muted-foreground">ctrlaltcreww@gmail.com</p>
                   </div>
                 </div>
                 
@@ -243,27 +243,36 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button 
+                  asChild
                   variant="outline" 
                   className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Schedule a Call
+                  <a href="https://wa.me/923349650000?text=Hi! I'd like to schedule a call with Ctrl Alt Crew" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Schedule a Call
+                  </a>
                 </Button>
                 
                 <Button 
+                  asChild
                   variant="outline" 
                   className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  <Coffee className="h-4 w-4 mr-2" />
-                  Virtual Coffee Chat
+                  <a href="https://wa.me/923349650000?text=Hi! Let's have a virtual coffee chat about my project" target="_blank" rel="noopener noreferrer">
+                    <Coffee className="h-4 w-4 mr-2" />
+                    Virtual Coffee Chat
+                  </a>
                 </Button>
                 
                 <Button 
+                  asChild
                   variant="outline" 
                   className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  <Mail className="h-4 w-4 mr-2" />
-                  Send Direct Email
+                  <a href="mailto:ctrlaltcreww@gmail.com?subject=Project Inquiry&body=Hi Ctrl Alt Crew team,%0D%0A%0D%0AI'd like to discuss a project with you.">
+                    <Mail className="h-4 w-4 mr-2" />
+                    Send Direct Email
+                  </a>
                 </Button>
               </CardContent>
             </Card>

@@ -146,9 +146,11 @@ const About = () => {
               asChild 
               variant="outline" 
               size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary group"
             >
-              <Link to="/services">See Our Services</Link>
+              <Link to="/services">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">See Our Services</span>
+              </Link>
             </Button>
           </div>
         </div>
