@@ -64,8 +64,9 @@ export default {
 				}
 			},
 		fontFamily: {
-			'sans': ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
-			'mono': ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
+			'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+			'heading': ['Urbanist', 'Inter', 'sans-serif'],
+			'mono': ['JetBrains Mono', 'monospace'],
 		},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',

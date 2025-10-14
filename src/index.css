@@ -6,49 +6,50 @@
 
 @layer base {
   :root {
-    /* Clean white & grey theme */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Dark Modern Theme with Futuristic Blue */
+    --background: 220 20% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 220 18% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Black primary */
-    --primary: 0 0% 10%;
+    /* Futuristic Blue Primary */
+    --primary: 211 100% 50%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 211 100% 60%;
 
-    /* Grey secondary */
-    --secondary: 0 0% 25%;
-    --secondary-foreground: 0 0% 100%;
+    /* Dark Secondary */
+    --secondary: 220 16% 22%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 16% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    /* Dark grey accent */
-    --accent: 0 0% 15%;
+    /* Blue Accent */
+    --accent: 211 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 96%;
-    --ring: 0 0% 20%;
+    --border: 220 16% 22%;
+    --input: 220 18% 16%;
+    --ring: 211 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Clean gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 10%), hsl(0 0% 25%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 96%), hsl(0 0% 90%));
-    --gradient-glow: linear-gradient(135deg, hsl(0 0% 20% / 0.1), hsl(0 0% 30% / 0.1));
+    /* Futuristic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%), hsl(211 100% 60%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 20% 8%), hsl(220 18% 12%));
+    --gradient-glow: linear-gradient(135deg, hsl(211 100% 50% / 0.2), hsl(211 100% 60% / 0.3));
 
-    /* Subtle key effects */
-    --key-shadow: 0 4px 12px hsl(0 0% 0% / 0.1);
-    --key-glow: 0 0 20px hsl(0 0% 20% / 0.2);
-    --key-hover: 0 6px 20px hsl(0 0% 20% / 0.3);
+    /* Blue Glow Effects */
+    --key-shadow: 0 4px 20px hsl(211 100% 50% / 0.2);
+    --key-glow: 0 0 30px hsl(211 100% 50% / 0.4);
+    --key-hover: 0 6px 40px hsl(211 100% 50% / 0.6);
 
     /* Animation variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,41 +73,41 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 220 25% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 220 20% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 220 20% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 211 100% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 220 16% 20%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 16% 16%;
+    --muted-foreground: 215 20% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 211 100% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 220 16% 20%;
+    --input: 220 18% 14%;
+    --ring: 211 100% 55%;
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 211 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 16% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 16% 20%;
+    --sidebar-ring: 211 100% 55%;
   }
 }
 
@@ -121,20 +122,35 @@
 }
 
 @layer components {
-  /* Keyboard Key Styles */
+  /* Keyboard Key Styles with Blue Glow */
   .keyboard-key {
     @apply bg-card border border-border rounded-lg px-4 py-2 shadow-lg;
     box-shadow: var(--key-shadow);
     transition: var(--transition-smooth);
+    border-color: hsl(211 100% 50% / 0.3);
   }
 
   .keyboard-key:hover {
     transform: translateY(-2px);
     box-shadow: var(--key-hover);
+    border-color: hsl(211 100% 50% / 0.6);
   }
 
   .keyboard-key-large {
     @apply keyboard-key px-8 py-4 text-lg font-bold;
+  }
+
+  /* Glass-morphism Card */
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-xl border border-border/50 rounded-lg shadow-2xl;
+    box-shadow: 0 8px 32px 0 hsl(211 100% 50% / 0.15);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    box-shadow: 0 8px 32px 0 hsl(211 100% 50% / 0.3);
+    border-color: hsl(211 100% 50% / 0.4);
+    transform: translateY(-4px);
   }
 
   /* Gradient backgrounds */
@@ -158,6 +174,17 @@
   .glow-hover:hover {
     box-shadow: var(--key-hover);
     transform: translateY(-4px) scale(1.02);
+  }
+
+  /* Blue Glow Border */
+  .glow-border {
+    border: 1px solid hsl(211 100% 50% / 0.3);
+    transition: var(--transition-smooth);
+  }
+
+  .glow-border:hover {
+    border-color: hsl(211 100% 50% / 0.8);
+    box-shadow: 0 0 20px hsl(211 100% 50% / 0.4);
   }
 
   /* Animated elements */
@@ -205,8 +232,8 @@
 }
 
 @keyframes pulse-glow {
-  from { box-shadow: 0 0 20px hsl(0 0% 20% / 0.2); }
-  to { box-shadow: 0 0 40px hsl(0 0% 20% / 0.4); }
+  from { box-shadow: 0 0 30px hsl(211 100% 50% / 0.3); }
+  to { box-shadow: 0 0 50px hsl(211 100% 50% / 0.6); }
 }
 
 @keyframes slide-up {
