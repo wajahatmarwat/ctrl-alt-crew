@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    /* Bright vibrant theme */
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* Clean white & grey theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Vibrant blue primary */
-    --primary: 217 91% 60%;
+    /* Black primary */
+    --primary: 0 0% 10%;
     --primary-foreground: 0 0% 100%;
 
-    /* Soft purple secondary */
-    --secondary: 270 60% 70%;
+    /* Grey secondary */
+    --secondary: 0 0% 25%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Bright cyan accent */
-    --accent: 180 80% 55%;
+    /* Dark grey accent */
+    --accent: 0 0% 15%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 0 0% 20%;
 
     --radius: 0.75rem;
 
-    /* Bright gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 60% 70%));
-    --gradient-dark: linear-gradient(135deg, hsl(210 40% 98%), hsl(214 32% 91%));
-    --gradient-glow: linear-gradient(135deg, hsl(217 91% 60% / 0.2), hsl(180 80% 55% / 0.2));
+    /* Clean gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 10%), hsl(0 0% 25%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 96%), hsl(0 0% 90%));
+    --gradient-glow: linear-gradient(135deg, hsl(0 0% 20% / 0.1), hsl(0 0% 30% / 0.1));
 
-    /* Bright key effects */
-    --key-shadow: 0 4px 12px hsl(217 91% 60% / 0.15);
-    --key-glow: 0 0 20px hsl(217 91% 60% / 0.4);
-    --key-hover: 0 6px 20px hsl(217 91% 60% / 0.5);
+    /* Subtle key effects */
+    --key-shadow: 0 4px 12px hsl(0 0% 0% / 0.1);
+    --key-glow: 0 0 20px hsl(0 0% 20% / 0.2);
+    --key-hover: 0 6px 20px hsl(0 0% 20% / 0.3);
 
     /* Animation variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -205,8 +205,8 @@
 }
 
 @keyframes pulse-glow {
-  from { box-shadow: 0 0 20px hsl(217 91% 60% / 0.3); }
-  to { box-shadow: 0 0 40px hsl(217 91% 60% / 0.6); }
+  from { box-shadow: 0 0 20px hsl(0 0% 20% / 0.2); }
+  to { box-shadow: 0 0 40px hsl(0 0% 20% / 0.4); }
 }
 
 @keyframes slide-up {
